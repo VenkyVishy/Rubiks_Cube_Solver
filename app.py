@@ -17,11 +17,12 @@ from rotate import *
 # method to concate all the faces in a way so that it can be given to kociemba module
 def concat(up_face,right_face,front_face,down_face,left_face,back_face):
     # solution = [up_face,right_face,front_face,down_face,left_face,back_face]
+     axis=None
     solution = np.concatenate((up_face, right_face), axis=None)
     solution = np.concatenate((solution, front_face), axis=None)
     solution = np.concatenate((solution, down_face), axis=None)
     solution = np.concatenate((solution, left_face), axis=None)
-    solution = np.concatenate((solution, back_face), axis=None)
+    solution = solution+back_face+ axis
     # print(solution)
     return solution
 
